@@ -11,7 +11,11 @@ export const constantRoutes = [
   {
     path: '/lazy-load-charts',
     component: () => import('@/views/lazyLoadCharts')
-  }
+  },
+  {
+    path: '/merge-table-ceils',
+    component: () => import('@/views/mergeTableCeils')
+  },
 ]
 
 const createRouter = () => {
