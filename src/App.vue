@@ -1,20 +1,23 @@
 <template>
   <div id="app">
-    <div>
-      <chartsComponent v-for="i in 50" :index="i" :key="i"/>
-    </div>
+    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router>
+      <el-menu-item index="/lazy-load-charts">lazy-load-charts</el-menu-item>
+      <el-menu-item index="/table-merge-ceils">table-merge-ceils</el-menu-item>
+    </el-menu>
+    <el-main>
+      <router-view></router-view>
+    </el-main>
   </div>
 </template>
 
 <script>
-import chartsComponent from './components/charts.vue'
 export default {
   name: 'App',
-  components: {chartsComponent},
-  
-  beforeCreate() {
-    console.log('创建', new Date())
-  },
+  data () {
+    return {
+      activeIndex: '/lazy-load-charts'
+    }
+  }
 }
 </script>
 

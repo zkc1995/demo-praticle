@@ -1,4 +1,4 @@
-# lazy-load-charts
+# demo-praticle
 
 ## Project setup
 ```
@@ -19,6 +19,9 @@ npm run build
 ```
 npm run lint
 ```
+
+### 目录简介
+|- lazy-load-charts ---懒加载图表demo
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

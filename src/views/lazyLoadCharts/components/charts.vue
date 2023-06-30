@@ -15,7 +15,9 @@ export default {
   },
   data() {
     return {
-      isIntersecting: false
+      isIntersecting: false,
+      seriesTypes: ['scatter', 'bar', 'line'],
+      seriesColor: ['#61A5E8', '#7ECF51', '#EECB5F', '#E3935D', '#E16757', '#56D0A3']
     }
   },
   mounted() {
@@ -52,8 +54,10 @@ export default {
           data: [5, 30, 36, 10, 10, 20]
         }
       }
-      // console.log('正在画图:', this.index)
-      console.log(`图标${this.index}`,new Date())
+      const index = Math.round(Math.random()*2)
+      const colorIndex = Math.floor(Math.random()*6)
+      option.series.type = this.seriesTypes[index]
+      option.series.color = this.seriesColor[colorIndex]
       myChart.setOption(option)
     }
   }
